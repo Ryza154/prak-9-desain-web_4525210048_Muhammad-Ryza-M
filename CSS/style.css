@@ -1,0 +1,95 @@
+/* Selaras Coffee - Custom CSS (branding)
+   Palet: espresso, krem, sage, karamel | Font: Playfair Display + DM Sans */
+
+:root {
+  --espresso: #3b2418;
+  --cream: #f7efe3;
+  --cream-dark: #efe2cf;
+  --sage: #6b7f5e;
+  --caramel: #c8843f;
+  --muted: #7a6a5f;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body { font-family: 'DM Sans', sans-serif; color: #2b1d15; background: #fffaf3; }
+h1, h2, h5, .brand-logo { font-family: 'Playfair Display', serif; }
+
+/* Lebar konten dibuat sempit agar semua tersusun satu kolom ke bawah */
+.narrow { max-width: 760px; }
+
+/* Tombol */
+.btn-selaras {
+  background: var(--caramel); border: 2px solid var(--caramel);
+  color: #fff; font-weight: 700; border-radius: 50px; transition: .25s;
+}
+.btn-selaras:hover { background: var(--espresso); border-color: var(--espresso); color: #fff; }
+.btn-outline-selaras {
+  border: 2px solid var(--espresso); color: var(--espresso);
+  font-weight: 700; border-radius: 50px; background: transparent;
+}
+.btn-outline-selaras:hover { background: var(--espresso); color: #fff; }
+
+/* Navbar */
+.navbar-selaras { background: rgba(247, 239, 227, .96); box-shadow: 0 2px 12px rgba(59, 36, 24, .08); }
+.brand-logo { font-weight: 700; font-size: 1.4rem; color: var(--espresso) !important; }
+.brand-logo i { color: var(--caramel); }
+.brand-logo span { color: var(--sage); }
+.navbar-selaras .nav-link { color: var(--espresso); font-weight: 500; }
+.navbar-selaras .nav-link:hover { color: var(--caramel); }
+
+/* Hero */
+.hero { padding: 100px 0 50px; background: var(--cream); }
+.hero-img { max-width: 420px; border-radius: 24px; box-shadow: 0 18px 40px rgba(59, 36, 24, .2); }
+.hero-title { font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 700; color: var(--espresso); margin: 1.5rem 0 .8rem; }
+.hero-title em { color: var(--caramel); }
+.hero-text { max-width: 520px; color: var(--muted); }
+
+/* Alert */
+.alert-promo {
+  margin-top: 2rem; background: var(--espresso); color: var(--cream);
+  border: none; border-left: 6px solid var(--caramel); border-radius: 12px;
+}
+.alert-promo .alert-link { color: var(--caramel); }
+.alert-promo .btn-close { filter: invert(1); }
+
+/* Section */
+.section { padding: 40px 0; }
+.section-title { color: var(--espresso); font-weight: 700; margin-bottom: 1.2rem; }
+
+/* Card produk */
+.product-card {
+  border: none; border-radius: 20px; overflow: hidden;
+  margin-bottom: 1.5rem; box-shadow: 0 6px 22px rgba(59, 36, 24, .1);
+  transition: transform .3s;
+}
+.product-card:hover { transform: translateY(-5px); }
+.product-img { width: 100%; height: 100%; min-height: 180px; object-fit: cover; display: block; }
+.product-card .card-title { color: var(--espresso); font-weight: 700; }
+.price { font-weight: 700; color: var(--sage); }
+.price small { color: var(--muted); font-weight: 400; }
+
+/* Form */
+.form-card { background: #fff; padding: 1.8rem; border-radius: 22px; box-shadow: 0 8px 28px rgba(59, 36, 24, .1); }
+.form-label { font-weight: 500; color: var(--espresso); }
+.form-control { border-radius: 12px; border: 1.5px solid var(--cream-dark); }
+.form-control:focus { border-color: var(--caramel); box-shadow: 0 0 0 .2rem rgba(200, 132, 63, .2); }
+
+/* Modal */
+.modal-selaras { border: none; border-radius: 20px; overflow: hidden; }
+.modal-selaras .modal-header { background: var(--espresso); color: var(--cream); border: none; }
+.modal-selaras .btn-close { filter: invert(1); }
+.modal-selaras th { color: var(--espresso); width: 36%; font-weight: 500; }
+
+/* Footer */
+.footer { background: var(--espresso); color: var(--cream-dark); padding: 40px 0 20px; margin-top: 40px; }
+.footer-brand { color: var(--cream) !important; }
+.social a {
+  display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center;
+  margin: 0 4px; border-radius: 50%; background: rgba(255, 255, 255, .1); color: var(--cream);
+}
+.social a:hover { background: var(--caramel); }
+
+@media (max-width: 767.98px) {
+  .product-img { min-height: 0; height: 200px; }
+  .card-body .btn { margin-top: .5rem; }
+}
